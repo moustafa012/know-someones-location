@@ -9,7 +9,7 @@ var location;
 var loc;
 var city;
 var reg;
-const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client(process.env.POSTGRESQL_ADDON_URI);
 client.connect();
 client.query("create table locations (id serial , ip text,location text,redirect_url text,time timestamp default now())")
 // #######################################################################
